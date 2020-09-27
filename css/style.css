@@ -1,0 +1,686 @@
+@import 'utility.css';
+
+:root{
+    --primary: #FF8C00;
+    --dark: #121212; 
+    --white: #FFFFFF;
+    --ternary: #898989;
+    --light: #F2F2F2;
+    --secondary: #070606;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-font-smotthing: antialiased;
+}
+
+header{
+    background-color: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 90%, 0 100%);
+}
+
+.container{
+    max-width: 1152px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+@media(min-width: 576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media(min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media(min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media(min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
+}
+
+
+header nav .left a{
+    color: var(--white);
+    text-decoration: none;
+    margin-right: 2rem;
+    text-transform: uppercase;
+    transition:all .3s ease;
+}
+
+header nav .left a:hover{
+    color: var(--primary);
+}
+
+header nav {
+    padding: 2rem 0;
+}
+
+header nav .branding{
+    margin-right: 3rem ;
+}
+
+.hero{
+    padding: 1.25rem 0;
+}
+
+.hero .left img{
+    width: 300px;
+}
+
+.hero .right{
+    color: var(--white);
+}
+
+.hero .right h6{
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.hero .right h1{
+    font-size: 3rem;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+.hero .right h1 span{
+    color: var(--primary);
+}
+
+.hero .right p{
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+section{
+    padding: 4rem 0;
+}
+
+section.about .about-me-image{
+    height: 400px;
+}
+
+section.about h1{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+section.about h1 span{
+    color: var(--primary);
+}
+
+section.about h3{
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+section.about p{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: var(--ternary);
+    font-size: 1rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+}
+
+section.about .social{
+    display: flex;
+}
+
+section.about .social a{
+    background: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    width: 32px;
+    height: 32px;
+    transition:all .3s ease;
+}
+
+section.about .social a:hover{
+    background: var(--primary);
+}
+
+section.about .social a image{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+}
+
+.section-heading{
+    color: var(--secondary);
+    text-align: center;
+    margin-bottom: 1rem;
+    line-height: 0.5;
+}
+
+.section-heading span{
+    color: var(--primary);
+}
+
+.section-heading + p{
+    color: var(--ternary);
+    font-family: 'Nanum Gothic', sans-serif;
+    margin-bottom: 6rem;
+    text-align: center;
+}
+
+section.services{
+    background: var(--light);
+}
+
+section.services .card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+    grid-row-gap: 5rem;
+}
+
+section.services .card-wrapper .card{
+    background: var(--white);
+    padding: 3rem 2rem;
+    position: relative;
+    padding-top: 5rem;
+    text-align: center;
+    transition:all .3s ease;
+}
+
+section.services .card-wrapper .card img{
+    position: absolute;
+    top: -3.2rem;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translateX(-50%);
+}
+
+section.services .card-wrapper .card h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+section.services .card-wrapper .card p{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: var(--ternary);
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+section.services .card-wrapper .card:hover{
+    background: var(--dark);
+}
+
+section.services .card-wrapper .card:hover h2, section.services .card-wrapper .card:hover p{
+    color: var(--white);
+}
+
+section.overview{
+    width: 80%;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+    background: var(--light);
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.skill-bar{
+    width: 90%;
+}
+
+.overview-heading{
+    color: var(--dark);
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+section.overview h1.bar{
+    font-weight: 500;
+    padding: 0;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+section.overview h1.bar span{
+    color: var(--primary);
+}
+
+.skillbox{
+    box-sizing: border-box;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.skillbox p{
+    color: var(--secondary);
+    text-transform: uppercase;
+    margin: 0 0 10px;
+    font-weight: bold;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.skillbox p:nth-child(2){
+    color: var(--ternary);
+    float: right;
+    position: relative;
+    top: -25px;
+}
+
+.skill{
+    background: var(--light);
+    padding: 2px;
+    box-sizing: border-box;
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+}
+
+.skill-level{
+    background: var(--primary);
+    width: 100%;
+    height: 5px;
+    animation: animate 3s ease-in-out forwards;
+}
+
+@keyframes animate
+{
+    from{
+        width: 0%;
+    }
+}
+
+section.overview .about-me-image{
+    width: 150px; 
+    border-radius: 75px;
+    display: block;
+    margin: 0 auto;
+}
+
+section.overview .bio h1{
+    text-align: center;
+    margin-top: 2rem;
+    font-family: 'Epilogue', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.overview .detail-top .second{
+    padding-left: 2rem;
+}
+
+section.overview .bio h3{
+    margin-bottom: 1rem;
+    color: var(--ternary);
+    text-align: center;
+    font-size: 1rem;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: 400;
+}
+
+section.overview .bio div{
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+section.project{
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 65% 92%, 0 100%);
+    padding-bottom: 6rem;
+}
+
+section.project .section-heading{
+    color: var(--white);
+}
+
+section.project .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    grid-gap: 2rem;
+}
+
+section.project .card-wrapper .card{
+    background: var(--white);
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px grey;
+}
+
+section.project .card-wrapper .card .img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+section.project .container .container{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5rem;
+    background: var(--white);
+    box-sizing: border-box;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+section.project .card-wrapper .card .card-content{
+    padding: 1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+} 
+
+section.project .card-wrapper .card .card-content h1{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+section.project .card-wrapper .card .card-content a:hover{
+    color: var(--primary);
+}
+
+section.project .card-wrapper .card .card-content a{
+    color: var(--secondary);
+    text-decoration: none;
+}
+
+section.project .card-wrapper .card .card-content p{
+    font-family: 'Nanum Gothic',sans-serif;
+    color: var(--ternary);
+    font-size: 0.9rem;
+    line-height: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+section.contact .card-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+
+section.contact .card-wrapper .card{
+    text-align: center;
+}
+
+section.contact .card-wrapper .card img{
+    margin-bottom: 2rem;
+}
+
+section.contact .card-wrapper .card h1{
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+section.contact .card-wrapper .card h6{
+    font-size: 0.75rem;
+    color: var(--ternary);
+    font-weight: 400;
+    margin-bottom: 3rem;
+}
+
+section.contact .input-wrap{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   grid-gap: 1rem;
+   margin-bottom: 1.5rem;
+}
+
+section.contact .input-wrap-2{
+    display: flex;
+    flex-direction: column;
+}
+
+section.contact .input-wrap-2 input{
+    margin-bottom: 1.5rem;
+    border: 2px solid var(--light);
+}
+
+section.contact .input-wrap-2 textarea{
+    padding: 0.5rem;
+    border: 2px solid var(--light);
+    font-size: 1rem;
+}
+
+section.contact input{
+    padding: 0.5rem;
+    font-size: 0.8rem;
+    border: 2px solid var(--light);
+}
+
+section.contact input:focus, section.contact textarea:focus{
+    outline: none;
+}
+
+section.contact .btn-wrapper{
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+footer{
+    background: var(--dark);
+    text-align: center;
+    padding: 2rem 0;
+}
+
+footer .footer-socials a{
+    margin-right: 1rem;
+}
+
+footer .footer-socials{
+    margin-bottom: 2rem;
+}
+footer .copyright{
+    color: var(--ternary);
+}
+
+.site-main-wrapper{
+    position: relative;
+}
+
+.hamburger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger img{
+    width: 30px;
+}
+
+.mobile-nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1001;
+    background: rgba(128, 128, 128, 0.9);
+    width: 100%;
+    height: 70%;
+    padding: 2rem;
+    padding-top: 4rem;
+    transform: translateX(-100%);
+    transition:all .5s ease-in-out;
+}
+
+.open{
+    transform: translateX(0);
+}
+
+.times{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.times img{
+    width: 30px;
+}
+
+.mobile-nav ul{
+    list-style-type: none;
+}
+
+.mobile-nav ul li{
+    margin: 1rem 1rem;
+}
+
+.mobile-nav ul li a{
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 1024px){
+    header #main-nav{
+        display: none;
+    }
+
+    .hamburger{
+        display: block;
+    }
+    .hero .left img{
+        width: 200px;
+    }
+    .hero .right h1{
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    .hero{
+        padding-top: 5rem;
+    }
+    header{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 25% 92%, 0 100%);;
+    }
+    section.project .card-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        padding-left: 2rem;
+        padding-right: 2rem;
+        grid-gap: 1rem;
+    }
+    section.project {
+        background: var(--dark);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 95%, 0 100%);
+        padding-bottom: 4rem;
+    }
+}
+
+@media (max-width: 576px){
+    .hero{
+        flex-direction: column;
+    }
+    header {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 97%, 0 100%);
+    }
+    .hero .right{
+        position: absolute;
+        margin-top: 10rem;
+        padding: 0 1rem;
+    }
+    .hero .right p {
+        line-height: 1.9;
+        margin-bottom: 2rem;
+        background: linear-gradient(rgba(0,0,0,0.25) , rgba(0,0,0,0.75));
+    }
+    
+    .hero .left{
+        margin-top: -2rem;
+        margin-right: -10rem;
+        padding-bottom: 2.5rem;
+    }
+    .hero .left img {
+        width: 250px;
+    }
+    .about-inner-wrap{
+        flex-direction: column;
+    }
+    section.about .about-me-image {
+        display: none;
+    }
+    section.about .right{
+        text-align: center;
+    }
+    .about .right .social{
+        justify-content: center;
+    }
+    section.services .card-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-column-gap: 1rem;
+        grid-row-gap: 5rem;
+    }
+    .overview .detail-top{
+        flex-direction: column;
+    }
+    .overview .detail-top .second{
+        padding-left: 0rem;
+        padding-bottom: 2rem;
+    }
+    section.project .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+        grid-gap: 1rem;
+    }
+    section.project {
+    background: var(--dark);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 75% 98.5%, 0 100%);
+    padding-bottom: 4rem;
+    }
+    .section-heading + p {
+        margin-bottom: 4rem;
+    }
+    section.contact .card-wrapper .card h1 {
+        font-weight: 400;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        display: none;
+    }
+    section.contact .card-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: 0.5rem;
+    }
+    section.contact .card-wrapper .card img {
+        margin-bottom: 0rem;
+        width: 24px;
+    }
+}
