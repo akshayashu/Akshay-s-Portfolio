@@ -1,5 +1,18 @@
 $(document).ready(function(){
 
+    //splash screen animations
+    const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
+
+    tl.to(".text", { y: "0%", duration: 1, stagger: 0.25 });
+    tl.to(".splash", { y: "-100%", duration: 1, delay: 1.5}, "-=1" );
+    tl.fromTo(".site-main-wrapper", { opacity: 0 }, { opacity: 1, duration: 1 });
+    tl.fromTo("nav", { opacity: 0 }, { opacity: 1, duration: 0.6 });
+    // tl.fromTo(".spl-1", { opacity: 0 }, { opacity: 1, duration: 0.4 });
+    // tl.fromTo(".spl-2", { opacity: 0 }, { opacity: 1, duration: 0.4 });
+    // tl.fromTo("section", { opacity: 0 }, { opacity: 1, duration: 0.4 });
+
+
+    // mobile hamburger UI
     let hamburger = document.querySelector('.hamburger');
     let times = document.querySelector('.times');
     let mobileNav = document.querySelector('.mobile-nav');
@@ -36,6 +49,8 @@ $(document).ready(function(){
 
 });
 
+
+//Skill-bar animation
 function isElementInViewport() {
     const box = document.querySelector('.skill-level');
     const rect = box.getBoundingClientRect();

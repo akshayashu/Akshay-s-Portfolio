@@ -13,6 +13,35 @@ body{
     font-family: 'Epilogue', sans-serif;
 }
 
+.splash{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-text {
+    color: rgb(233, 233, 233);
+    font-family: "Nanum Gothic", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+  }
+  
+  .hide {
+    background: black;
+    overflow: hidden;
+  }
+  
+  .hide span {
+    transform: translateY(100%);
+    display: inline-block;
+  }
+
 html{
     scroll-behavior: smooth;
 }
@@ -576,6 +605,9 @@ footer .copyright{
     header #main-nav{
         display: none;
     }
+    .intro-text{
+        font-size: 1.25rem;
+    }
 
     .hamburger{
         display: block;
@@ -609,6 +641,9 @@ footer .copyright{
 @media (max-width: 576px){
     .hero{
         flex-direction: column;
+    }
+    .intro-text{
+        font-size: 0.5rem;
     }
     header {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 80% 97%, 0 100%);
