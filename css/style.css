@@ -307,8 +307,10 @@ section.overview h1.bar span{
 
 .skill-level{
     background: var(--primary);
-    width: 100%;
     height: 5px;
+}
+
+.begin{
     animation: animate 3s ease-in-out forwards;
 }
 

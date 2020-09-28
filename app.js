@@ -35,3 +35,38 @@ $(document).ready(function(){
     })
 
 });
+
+function isElementInViewport() {
+    const box = document.querySelector('.skill-level');
+    const rect = box.getBoundingClientRect();
+
+    const isInViewport = rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth);
+
+    return isInViewport;
+}
+
+// Check if it's time to start the animation.
+function checkAnimation() {
+    var $elem = $('.skill-level');
+
+    // // If the animation has already been started
+    // if ($elem.hasClass('begin')) return;
+
+    if (isElementInViewport()) {
+   
+        console.log('isInView')
+        // Start the animation
+        $elem.addClass('begin');
+    } else{
+        $elem.remove('begin');
+    }
+}
+
+
+$(window).scroll(function(){
+    checkAnimation();
+    
+})
