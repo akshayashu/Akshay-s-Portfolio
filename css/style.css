@@ -721,3 +721,9 @@ footer .copyright{
         width: 24px;
     }
 }
+
+/* actions */
+.actions{
+    text-decoration: none; 
+    color: var(--dark);
+}

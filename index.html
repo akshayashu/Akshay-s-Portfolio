@@ -17,7 +17,7 @@
               <span class="text">Hello Everyone!</span>
             </h1>
             <h1 class="hide">
-              <span class="text">welcome to my website</span>
+              <span class="text">Welcome to my website</span>
             </h1>
           </div>
     </div>
@@ -62,7 +62,7 @@
                         <p>I'm a certified Full-stack Android developer and programmer living in New Delhi.
                             I'm available for freelancing. Thinking out of the box is something that makes me unique from others.</p>
                         <div>
-                            <button class="btn btn-secondary">Download CV</button>
+                            <a href="./assets/Akshay's Resume.pdf" download="Akshay's Resume"><button class="btn btn-secondary">Download CV</button></a>
                         </div>    
                     </div>
                 </div>
@@ -178,7 +178,9 @@
                     <h1>Akshay Khanna</h1>
                     <h3>Full-stack Android Developer</h3>
                     <div class="flex">
-                        <button class="btn btn-primary">Hire Me</button>
+                        <a href="mailto:akshay.khanna0810@gmail.com?subject=Joining offer&body=Hi, we've found your profile very interesting for our company/organization. We would like to get in touch with you.">
+                            <button class="btn btn-primary">Hire Me</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -237,33 +239,39 @@
                 <p>Get in touch if you've any query and also available for free-lancing</p>
                 <div class="card-wrapper">
                     <div class="card">
-                        <img src="./assets/phone-1.svg" alt="">
-                        <h1>Phone no.</h1>
-                        <h6>+91 9871736200</h6>
+                        <a href="tel:+9199871736200" class="actions">
+                            <img src="./assets/phone-1.svg" alt="">
+                            <h1>Phone no.</h1>
+                            <h6>+91 9871736200</h6>
+                        </a>
                     </div>
                     <div class="card">
-                        <img src="./assets/email.svg" alt="">
-                        <h1>Email</h1>
-                        <h6>akshay.khanna0810@gmail.com</h6>
+                        <a href="mailto:akshay.khanna0810@gmail.com" class="actions">
+                            <img src="./assets/email.svg" alt="">
+                            <h1>Email</h1>
+                            <h6>akshay.khanna0810@gmail.com</h6>
+                        </a>
                     </div>
                     <div class="card">
-                        <img src="./assets/twitter.svg" alt="">
-                        <h1>Connect with me</h1>
-                        <h6>@AkshayK10904164</h6>
+                        <a href="https://twitter.com/AkshayK10904164" class="actions"></a>
+                            <img src="./assets/twitter.svg" alt="">
+                            <h1>Connect with me</h1>
+                            <h6>@AkshayK10904164</h6>
+                        </a>
                     </div>
                 </div>
                 
-                <form action="">
+                <form action="mailto:akshay.khanna0810@gmail.com" method="GET">
                     <div class="input-wrap">
                         <input type="text" placeholder="Name">
                         <input type="email" placeholder="Email">
                     </div>
                     <div class="input-wrap-2">
-                        <input type="text" placeholder="Subject">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
+                        <input name="subject" type="text" placeholder="Subject">
+                        <textarea name="body" id="" cols="30" rows="10" placeholder="Message"></textarea>
                     </div>
                     <div class="btn-wrapper">
-                        <button class="btn btn-primary">Send Message</button>
+                        <button type="submit" value="send" class="btn btn-primary">Send Message</button>
                     </div>
                 </form>
             </div>
