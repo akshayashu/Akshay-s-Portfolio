@@ -91,7 +91,8 @@ header{
 header nav .left a{
     color: var(--white);
     text-decoration: none;
-    margin-right: 2rem;
+    margin-right: 1.5rem;
+    font-family: "Nanum Gothic";
     text-transform: uppercase;
     transition:all .3s ease;
 }
