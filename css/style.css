@@ -88,7 +88,6 @@ header{
     }
 }
 
-
 header nav .left a{
     color: var(--white);
     text-decoration: none;
@@ -106,7 +105,17 @@ header nav {
 }
 
 header nav .branding{
-    margin-right: 3rem ;
+    margin-right: 3rem;
+}
+
+.branding h1{
+    font-size: 2rem;
+    color: var(--white);
+    font-family: 'Epilogue';
+}
+
+.branding span{
+    color: var(--primary);
 }
 
 .hero{
